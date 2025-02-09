@@ -1,9 +1,10 @@
 import AnswersItem from "./AnswersItem";
+import PropTypes from "prop-types";
 
 export default function AnswersList(props) {
   console.log("Inside AnswersList: ", props);
 
-  const { answersList } = props;
+  const answersList  = props.answersList;
 
   return (
     <ul>
@@ -12,4 +13,8 @@ export default function AnswersList(props) {
       ))}
     </ul>
   );
+}
+
+AnswersList.propTypes = {
+  answersList: PropTypes.array
 }
